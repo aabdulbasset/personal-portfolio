@@ -1,0 +1,67 @@
+.hovered{
+    color: #0f5 !important;
+    transition: all 0.35s ease-in-out;
+    position: relative;
+}
+/* blinking vertical cursor */
+.hovered::after{
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: calc(100% - 0.5rem);
+    right: -5px;
+    bottom: 15%;
+    background-color: #0f5;
+    visibility: hidden;
+    animation: animate 0.55s ease-in-out infinite;
+    transform: translate(-50%, -50%) ;
+    
+}
+@keyframes animate{
+    0%{
+        visibility: hidden;
+        transform: scaleX(0);
+    }
+    50%{
+        visibility: visible;
+        transform: scaleX(1);
+    }
+    100%{
+        visibility: hidden;
+        transform: scaleX(0);
+    }
+}
+.selected{
+    position: relative;
+}
+/* fill effect from the curson */
+.selected::after{
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: calc(100% - 0.5rem);
+    right: -5px;
+    bottom: 15%;
+    background-color: #0f5;
+    visibility: hidden;
+    animation: fill-effect 0.35s linear forwards normal;
+    mix-blend-mode: difference;
+
+}
+@keyframes fill-effect{
+    0%{
+        visibility: hidden;
+        
+    }
+
+    50%{
+        visibility: visible;
+        right: -2px;
+        width:50%
+    }
+    100%{
+        visibility: visible;
+        right: 0px;
+        width: 100%;
+    }
+}
