@@ -13,6 +13,13 @@
 
   }
 }
+*{
+    scroll-behavior: smooth;
+
+}
+:root{
+    --radius: 0.25rem;
+}
 #my-name{
     background: -webkit-linear-gradient(left, #2eff56 , #05420e);
     background-clip: text;

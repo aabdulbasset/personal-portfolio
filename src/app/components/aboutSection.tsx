@@ -35,7 +35,7 @@ export default function AboutSection() {
         <img
           src="freelancer.png"
           width={"700px"}
-          className="hero-image mx-auto"
+          className="hero-image mx-auto -z-10"
         ></img>
         <div className="image-shadow"></div>
       </Box>

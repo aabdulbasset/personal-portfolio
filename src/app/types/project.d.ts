@@ -5,5 +5,10 @@ type Project = {
   imageURL: string;
   liveURL: string;
   githubURL: string;
-  technologies: string[];
+  technologies: Technology[];
+};
+
+type Technology = {
+  name: string;
+  color: string;
 };
