@@ -2,7 +2,7 @@ import { Badge, Box, Button, Flex } from "@radix-ui/themes";
 
 export default function ProjectCard({ project }: { project: Project }) {
   return (
-    <Box className="z-10 w-full backdrop-blur-lg rounded-xl shadow-sm overflow-hidden border border-slate-800 bg-[#3F306B20]">
+    <Box  className="z-10 w-full backdrop-blur-lg rounded-xl shadow-sm overflow-hidden border border-slate-800 bg-[#3F306B20]">
       <div>
         <img
           style={{
@@ -15,12 +15,13 @@ export default function ProjectCard({ project }: { project: Project }) {
         ></img>
       </div>
       <Flex direction={"column"} gap={"4"} className="px-6 py-8">
-        <h1 className="text-white text-3xl font-extrabold	">{project.title}</h1>
+        <h1 className="text-white text-3xl font-extrabold">{project.title}</h1>
         <h3 className="text-slate-500">{project.description}</h3>
         <Flex gap={"1"}>
-          {project.technologies.map((technology) => {
+          {project.technologies.map((technology,index) => {
             return (
               <Badge
+              key={index}
                 style={{
                   backgroundColor: technology.color,
                 }}
@@ -55,7 +56,7 @@ export default function ProjectCard({ project }: { project: Project }) {
             </a>
           )}
           {project.liveURL && (
-            <a href={project.githubURL} target="_blank">
+            <a href={project.liveURL} target="_blank">
               <button className="flex items-center justify-center text-[#1dab42] p-2 rounded-lg transition-all transition-100 border border-transparent hover:border-[#064610] hover:backdrop-blur-xl">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

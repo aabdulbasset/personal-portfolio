@@ -1,6 +1,9 @@
+"use client";
 import { Box, Flex, Heading, Text } from "@radix-ui/themes";
-
+import { MotionBox } from "./ui/motionBox";
+import Image from "next/image";
 export default function AboutSection({
+    
   name,
   location,
 }: {
@@ -15,7 +18,15 @@ export default function AboutSection({
         height: "100vh",
       }}
     >
-      <Box className="flex-grow text-slate-200">
+      <MotionBox className="flex-grow text-slate-200" initial={{
+        opacity: 0,
+      }} whileInView={{
+        opacity: 1,
+        transition: {
+          duration: 1,
+        }
+      
+      }} viewport={{once:true}} > 
         <Text
           size={"7"}
           style={{
@@ -36,13 +47,15 @@ export default function AboutSection({
         <Text size={"7"}>
           A fullstack web developer currently located in {location}.
         </Text>
-      </Box>
+      </MotionBox>
       <Box className="flex-grow">
-        <img
-          src="freelancer.png"
-          width={"700px"}
+        <Image
+          src="/freelancer.png"
+          width={700}
+          height={700}
           className="hero-image mx-auto -z-10"
-        ></img>
+          alt="hero image of a freelancer"
+        ></Image>
         <div className="image-shadow"></div>
       </Box>
     </Flex>

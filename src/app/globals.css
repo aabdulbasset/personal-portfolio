@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
- 
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600;700&display=swap');
 @layer base {
   * {
     @apply border-border;
@@ -15,7 +15,7 @@
 }
 *{
     scroll-behavior: smooth;
-
+    font-family: 'Rubik', sans-serif;
 }
 :root{
     --radius: 0.25rem;

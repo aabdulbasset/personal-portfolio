@@ -1,9 +1,12 @@
 "use client";
 import { Box, Flex } from "@radix-ui/themes";
 import CustomLink from "./ui/customNavLink";
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { ViewContext } from "../context/viewContext";
+
 export default function Navbar() {
-  const [selected, setSelected] = useState(0);
+  const { selected, setSelected } = useContext(ViewContext);
+
   const routes = [
     {
       name: "About",
@@ -18,6 +21,7 @@ export default function Navbar() {
       location: "#contact",
     },
   ];
+
   //TODO: animate logo
   return (
     <Box className="w-3/4">
@@ -26,6 +30,7 @@ export default function Navbar() {
           style={{
             color: "#02cc45",
             fontWeight: "bold",
+            fontSize: "1.5rem",
           }}
         >
           aabdulbasset

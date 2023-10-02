@@ -20,6 +20,7 @@ export default function CustomLink({
       style={{
         color: "#02cc45",
         padding: "2px",
+        margin: "auto 0",
       }}
       underline="hover"
       data-id={id}

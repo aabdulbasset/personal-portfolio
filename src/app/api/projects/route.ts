@@ -10,7 +10,7 @@ export async function GET(request: Request) {
       title: entry.fields.title,
       description: entry.fields.description,
       imageURL: entry.fields.image.fields.file.url,
-      liveURL: entry.fields.link ?? null,
+      liveURL: entry.fields.liveUrl ?? null,
       githubURL: entry.fields.github ?? null,
       technologies: entry.fields.technologies!.map((technology) => ({
         name: technology.fields.name,
