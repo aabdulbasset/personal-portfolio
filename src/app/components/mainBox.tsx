@@ -28,8 +28,15 @@ export function MainBox({
       >
         <Navbar />
       </header>
-      <Box id="main-container" className="mx-auto flex w-3/4 flex-col mb-8">
-        <TrackedSection index={0} id="about" className="min-h-screen">
+      <Box
+        id="main-container"
+        className="mx-auto flex lg:w-3/4 w-11/12 flex-col mb-8"
+      >
+        <TrackedSection
+          index={0}
+          id="about"
+          className="min-h-screen md:mt-0 mt-[10vh]"
+        >
           <AboutSection name={info.name} location={info.location} />
         </TrackedSection>
         <TrackedSection index={1} id="projects" className="min-h-screen">

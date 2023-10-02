@@ -1,5 +1,5 @@
 "use client";
-import { Box, Flex, Heading, Text } from "@radix-ui/themes";
+import { Box, Flex, Grid, Heading, Text } from "@radix-ui/themes";
 import { MotionBox } from "./ui/motionBox";
 import Image from "next/image";
 export default function AboutSection({
@@ -10,15 +10,19 @@ export default function AboutSection({
   location: string;
 }) {
   return (
-    <Flex
+    <Grid
       align={"center"}
       justify={"center"}
       style={{
         height: "100vh",
       }}
+      columns={{
+        initial: "1",
+        md: "2",
+      }}
     >
       <MotionBox
-        className="flex-grow text-slate-200"
+        className="flex-grow text-slate-200 text-center lg:text-left"
         initial={{
           opacity: 0,
         }}
@@ -31,7 +35,11 @@ export default function AboutSection({
         viewport={{ once: true }}
       >
         <Text
-          size={"7"}
+          size={{
+            initial: "3",
+            md: "5",
+            lg: "7",
+          }}
           style={{
             color: "#d3d9e0",
           }}
@@ -40,27 +48,37 @@ export default function AboutSection({
         </Text>
         <Heading
           className="text-4xl"
-          size={"9"}
+          size={{
+            initial: "7",
+            md: "8",
+            xl: "9",
+          }}
           style={{
             lineHeight: "1.5",
           }}
         >
           I&apos;m <span id="my-name"> {name}</span>
         </Heading>
-        <Text size={"7"}>
+        <Text
+          size={{
+            initial: "3",
+            md: "5",
+            lg: "7",
+          }}
+        >
           A fullstack web developer currently located in {location}.
         </Text>
       </MotionBox>
       <Box className="flex-grow">
         <Image
           src="/freelancer.png"
-          width={700}
-          height={700}
+          width={600}
+          height={600}
           className="hero-image mx-auto -z-10"
           alt="hero image of a freelancer"
         ></Image>
         <div className="image-shadow"></div>
       </Box>
-    </Flex>
+    </Grid>
   );
 }
