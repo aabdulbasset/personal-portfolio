@@ -1,4 +1,3 @@
-import Navbar from "./components/navbar";
 import "@radix-ui/themes/styles.css";
 import { Box, Flex, IconButton, Text } from "@radix-ui/themes";
 import { Github, Linkedin, Mail } from "lucide-react";
