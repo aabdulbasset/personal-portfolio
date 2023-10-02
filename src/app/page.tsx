@@ -5,16 +5,16 @@ import { Github, Linkedin, Mail } from "lucide-react";
 import { MainBox } from "./components/mainBox";
 
 export default async function Home() {
-    const info= await fetch(process.env.DOMAIN + "api/").then((res) => res.json())
-    const projects  = await (
-      await fetch(process.env.DOMAIN +"api/projects/")
-    ).json()
-
+  const info = await fetch(process.env.DOMAIN + "api/")
+    .then((res) => res.json())
+    .catch((err) => console.log(err));
+  const projects = await (
+    await fetch(process.env.DOMAIN + "api/projects/")
+  ).json();
 
   //TODO: dynamic site name
   return (
     <>
-
       <MainBox info={info} projects={projects} />
       <footer className="w-full bg-[#1f153c] border-t">
         <Box className="text-slate-300 text-center p-12  flex flex-col gap-2 ">
