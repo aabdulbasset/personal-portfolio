@@ -3,7 +3,6 @@ import { Box, Flex, Heading, Text } from "@radix-ui/themes";
 import { MotionBox } from "./ui/motionBox";
 import Image from "next/image";
 export default function AboutSection({
-    
   name,
   location,
 }: {
@@ -18,15 +17,19 @@ export default function AboutSection({
         height: "100vh",
       }}
     >
-      <MotionBox className="flex-grow text-slate-200" initial={{
-        opacity: 0,
-      }} whileInView={{
-        opacity: 1,
-        transition: {
-          duration: 1,
-        }
-      
-      }} viewport={{once:true}} > 
+      <MotionBox
+        className="flex-grow text-slate-200"
+        initial={{
+          opacity: 0,
+        }}
+        whileInView={{
+          opacity: 1,
+          transition: {
+            duration: 1,
+          },
+        }}
+        viewport={{ once: true }}
+      >
         <Text
           size={"7"}
           style={{
@@ -42,7 +45,7 @@ export default function AboutSection({
             lineHeight: "1.5",
           }}
         >
-          I'm <span id="my-name"> {name}</span>
+          I&apos;m <span id="my-name"> {name}</span>
         </Heading>
         <Text size={"7"}>
           A fullstack web developer currently located in {location}.
