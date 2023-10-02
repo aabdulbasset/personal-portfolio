@@ -35,7 +35,10 @@ export default function Navbar() {
         >
           aabdulbasset
         </h1>
-        <Flex gap={"5"} onClick={(e) => setSelected(e.target.dataset.id)}>
+        <Flex
+          gap={"5"}
+          onClick={(e) => setSelected(e.currentTarget.dataset.id)}
+        >
           {routes.map((route, index) => {
             return (
               <CustomLink

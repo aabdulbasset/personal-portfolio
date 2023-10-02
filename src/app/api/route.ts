@@ -7,7 +7,7 @@ export async function GET() {
   ).items[0];
 
   return Response.json({
-    name: entry.fields.name.split(" ").map(titleCase).join(" "),
+    name: (entry.fields.name! as string).split(" ").map(titleCase).join(" "),
     location: titleCase(entry.fields.location as string),
     email: entry.fields.email,
     github: entry.fields.github,
