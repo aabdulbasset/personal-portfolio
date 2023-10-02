@@ -32,11 +32,16 @@ export default function Navbar() {
             fontWeight: "bold",
             fontSize: "1.5rem",
           }}
+          className="mx-auto md:mx-0"
         >
           aabdulbasset
         </h1>
         <Flex
           gap={"5"}
+          display={{
+            initial: "none",
+            sm: "flex",
+          }}
           onClick={(e) => setSelected(e.currentTarget.dataset.id)}
         >
           {routes.map((route, index) => {

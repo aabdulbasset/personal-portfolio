@@ -20,7 +20,7 @@ export function MainBox({
     <ViewContext.Provider value={{ selected, setSelected }}>
       <header
         id="navbar"
-        className="py-4 justify-center flex w-full fixed backdrop-blur-md z-20 border-b "
+        className="py-4 justify-center flex w-full fixed backdrop-blur-md z-20 border-b"
         style={{
           left: "50%",
           transform: "translateX(-50%)",
@@ -35,7 +35,7 @@ export function MainBox({
         <TrackedSection
           index={0}
           id="about"
-          className="min-h-screen md:mt-0 mt-[10vh]"
+          className="min-h-screen lg:mt-0  mt-[100px]"
         >
           <AboutSection name={info.name} location={info.location} />
         </TrackedSection>

@@ -37,7 +37,7 @@ export default function AboutSection({
         <Text
           size={{
             initial: "3",
-            md: "5",
+            sm: "6",
             lg: "7",
           }}
           style={{
@@ -50,7 +50,7 @@ export default function AboutSection({
           className="text-4xl"
           size={{
             initial: "7",
-            md: "8",
+            sm: "9",
             xl: "9",
           }}
           style={{
@@ -62,7 +62,7 @@ export default function AboutSection({
         <Text
           size={{
             initial: "3",
-            md: "5",
+            sm: "6",
             lg: "7",
           }}
         >

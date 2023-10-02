@@ -1,27 +1,29 @@
 import { Badge, Box, Button, Flex } from "@radix-ui/themes";
-
+import Image from "next/image";
 export default function ProjectCard({ project }: { project: Project }) {
   return (
-    <Box  className="z-10 w-full backdrop-blur-lg rounded-xl shadow-sm overflow-hidden border border-slate-800 bg-[#3F306B20]">
+    <Box className="z-10 w-full backdrop-blur-lg rounded-xl shadow-sm overflow-hidden border border-slate-800 bg-[#3F306B20]">
       <div>
-        <img
+        <Image
+          alt="project image"
           style={{
-            width: "100%",
-            height: "auto",
             maxHeight: "300px",
             objectFit: "cover",
+            height: "700px",
           }}
-          src={project.imageURL}
-        ></img>
+          width={1000}
+          height={500}
+          src={"https:" + project.imageURL}
+        ></Image>
       </div>
       <Flex direction={"column"} gap={"4"} className="px-6 py-8">
         <h1 className="text-white text-3xl font-extrabold">{project.title}</h1>
         <h3 className="text-slate-500">{project.description}</h3>
-        <Flex gap={"1"}>
-          {project.technologies.map((technology,index) => {
+        <Flex gap={"1"} wrap={"wrap"}>
+          {project.technologies.map((technology, index) => {
             return (
               <Badge
-              key={index}
+                key={index}
                 style={{
                   backgroundColor: technology.color,
                 }}
