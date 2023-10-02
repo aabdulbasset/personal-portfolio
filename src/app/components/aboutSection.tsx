@@ -1,6 +1,12 @@
 import { Box, Flex, Heading, Text } from "@radix-ui/themes";
 
-export default function AboutSection() {
+export default function AboutSection({
+  name,
+  location,
+}: {
+  name: string;
+  location: string;
+}) {
   return (
     <Flex
       align={"center"}
@@ -25,10 +31,10 @@ export default function AboutSection() {
             lineHeight: "1.5",
           }}
         >
-          I'm <span id="my-name"> Ahmed Abdulbasset</span>
+          I'm <span id="my-name"> {name}</span>
         </Heading>
         <Text size={"7"}>
-          A fullstack web developer currently located in Egypt.
+          A fullstack web developer currently located in {location}.
         </Text>
       </Box>
       <Box className="flex-grow">
