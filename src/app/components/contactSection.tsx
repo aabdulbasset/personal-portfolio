@@ -35,8 +35,11 @@ export default function ContactSection({ email }: { email: string }) {
       >
         Let&apos;s build something great!
       </Heading>
-      <a className="text-white font-extrabold mx-auto" href={"mailto:" + email}>
-        <button className="mb-12 border-2 border-[#05420e] transition-all hover:bg-[#05420e] mt-12 w-[15rem] rounded-full p-4 ">
+      <a
+        className="text-white font-extrabold mx-auto mb-12 mt-12"
+        href={"mailto:" + email}
+      >
+        <button className=" border-2 border-[#05420e] transition-all hover:bg-[#05420e]  w-[15rem] rounded-full p-4 ">
           <Text size={{}}>Get in Touch</Text>
         </button>
       </a>
