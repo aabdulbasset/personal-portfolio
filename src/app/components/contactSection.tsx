@@ -38,9 +38,13 @@ export default function ContactSection({ email }: { email: string }) {
       <a
         className="text-white font-extrabold mx-auto mb-12 mt-12"
         href={"mailto:" + email}
+        aria-label="Get in Touch Button"
       >
-        <button className=" border-2 border-[#05420e] transition-all hover:bg-[#05420e]  w-[15rem] rounded-full p-4 ">
-          <Text size={{}}>Get in Touch</Text>
+        <button
+          aria-label="Get in Touch Button"
+          className=" border-2 border-[#05420e] transition-all hover:bg-[#05420e]  w-[15rem] rounded-full p-4 "
+        >
+          <Text>Get in Touch</Text>
         </button>
       </a>
     </MotionFlex>

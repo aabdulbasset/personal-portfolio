@@ -19,20 +19,24 @@ export default async function Home() {
       <footer className="w-full bg-[#1f153c] border-t">
         <Box className="text-slate-300 text-center p-12  flex flex-col gap-2 ">
           <Flex justify={"center"} gap={"2"}>
-            <IconButton>
-              <a target="_blank" href={info.github}>
+            <IconButton aria-label="Github icon">
+              <a target="_blank" href={info.github} aria-label="Github link">
                 <Github />
               </a>
             </IconButton>
             {info.linkedin && (
-              <IconButton>
-                <a target="_blank" href={info.linkedin}>
+              <IconButton aria-label="Linkedin icon">
+                <a
+                  target="_blank"
+                  href={info.linkedin}
+                  aria-label="Linkedin Link"
+                >
                   <Linkedin />
                 </a>
               </IconButton>
             )}
-            <IconButton>
-              <a href={"mailto:" + info.email}>
+            <IconButton aria-label="Email icon">
+              <a href={"mailto:" + info.email} aria-label="Email to link">
                 <Mail />
               </a>
             </IconButton>

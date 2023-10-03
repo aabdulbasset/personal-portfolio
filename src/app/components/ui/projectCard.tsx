@@ -38,8 +38,11 @@ export default function ProjectCard({ project }: { project: Project }) {
         </Flex>
         <div className="ml-auto flex items-center justify-center">
           {project.githubURL && (
-            <a href={project.githubURL} target="_blank">
-              <button className="text-[#1dab42] p-2 rounded-lg transition-all transition-100 border border-transparent hover:border-[#064610] hover:backdrop-blur-xl">
+            <a href={project.githubURL} target="_blank" aria-label="Github URL">
+              <button
+                aria-label="Project github"
+                className="text-[#1dab42] p-2 rounded-lg transition-all transition-100 border border-transparent hover:border-[#064610] hover:backdrop-blur-xl"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -58,8 +61,11 @@ export default function ProjectCard({ project }: { project: Project }) {
             </a>
           )}
           {project.liveURL && (
-            <a href={project.liveURL} target="_blank">
-              <button className="flex items-center justify-center text-[#1dab42] p-2 rounded-lg transition-all transition-100 border border-transparent hover:border-[#064610] hover:backdrop-blur-xl">
+            <a href={project.liveURL} target="_blank" aria-label="Live URL">
+              <button
+                aria-label="project live url"
+                className="flex items-center justify-center text-[#1dab42] p-2 rounded-lg transition-all transition-100 border border-transparent hover:border-[#064610] hover:backdrop-blur-xl"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
