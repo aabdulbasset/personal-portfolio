@@ -1,6 +1,7 @@
 import { contentfulClient } from "../contentful";
 
 export async function GET(request: Request) {
+  let requestObject = request.headers;
   let entries = await contentfulClient.getEntries({
     content_type: "project",
   });
