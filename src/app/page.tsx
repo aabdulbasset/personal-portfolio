@@ -2,6 +2,8 @@ import "@radix-ui/themes/styles.css";
 import { Box, Flex, IconButton, Text } from "@radix-ui/themes";
 import { Github, Linkedin, Mail } from "lucide-react";
 import { MainBox } from "./components/mainBox";
+
+export const dynamic = "force-dynamic";
 export default async function Home() {
   const info = await fetch(process.env.DOMAIN + "api/").then((res) =>
     res.json()
