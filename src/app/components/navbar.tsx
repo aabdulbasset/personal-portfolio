@@ -3,7 +3,11 @@ import { Box, Flex } from "@radix-ui/themes";
 import CustomLink from "./ui/customNavLink";
 import { useContext, useEffect, useState } from "react";
 import { ViewContext } from "../context/viewContext";
-
+import { Barlow_Condensed } from "next/font/google";
+const barlow = Barlow_Condensed({
+  weight: "300",
+  subsets: ["latin-ext"],
+});
 export default function Navbar() {
   const { selected, setSelected } = useContext(ViewContext);
 
@@ -28,13 +32,13 @@ export default function Navbar() {
       <Flex justify={"between"} grow={"1"}>
         <h1
           style={{
-            color: "#02cc45",
+            color: "white",
             fontWeight: "bold",
             fontSize: "1.5rem",
           }}
-          className="mx-auto md:mx-0"
+          className={"mx-auto md:mx-0 " + barlow.className}
         >
-          aabdulbasset
+          &#60;aabdulbasset /&#62;
         </h1>
         <Flex
           gap={"5"}
