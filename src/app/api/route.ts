@@ -1,5 +1,5 @@
 import { contentfulClient } from "./contentful";
-export async function GET() {
+export async function GET(request: Request) {
   let entry = (
     await contentfulClient.getEntries({
       content_type: "portfolioInfo",
