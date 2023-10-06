@@ -1,9 +1,9 @@
 </br>
 </br>
 
-<h2 align="center">
+<h3 align="center">
 Dev Portfolio
-</h2>
+</h3>
 <p align="center">
 A responsive code-themed developer portfolio built using Next.js v13, Contentful CMS, Radix-UI
 </br>
@@ -18,7 +18,7 @@ A responsive code-themed developer portfolio built using Next.js v13, Contentful
 ## About the Project
 
 </br>
-<img align="center" src="assets/screenshot.png"></img>
+<img align="center" src="assets/Screenshot.png"></img>
 </br>
 </br>
 
