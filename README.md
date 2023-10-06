@@ -1,36 +1,106 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+</br>
+</br>
+
+<h2 align="center">
+Dev Portfolio
+</h2>
+<p align="center">
+A responsive code-themed developer portfolio built using Next.js v13, Contentful CMS, Radix-UI
+</br>
+</br>
+<a href="https://aabdulbasset.com">Demo</a>
+·
+<a href="https://github.com/aabdulbasset/personal-portfolio/issues">Report Bug</a>
+·
+<a href="https://github.com/aabdulbasset/personal-portfolio/issues">Suggest Feature</a>
+</p>
+
+## About the Project
+
+</br>
+<img align="center" src="assets/screenshot.png"></img>
+</br>
+</br>
+
+### Built With
+
+- [![Next][Next.js]][Next-url]
+- [![radixui][radixui]][radixui-url]
+- [![Contentful][Contentful]][Contentful-url]
+- [![TailwindCSS][tailwindcss]][tailwindcss-url]
 
 ## Getting Started
 
-First, run the development server:
+To get a local copy up and running follow these simple example steps.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Prerequisites
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- node [From Here][node-url]
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- npm
+  ```sh
+  npm install npm@latest -g
+  ```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Installation
 
-## Learn More
+1. Create a [Contentful][Contentful-url] Account
+2. Get a [Contentful management token][contentful-token]
+3. Clone the repo
+   ```sh
+   git clone https://github.com/aabdulbasset/personal-portfolio.git
+   ```
+4. Rename .env.local.example to .env.local and fill in the management token from step 2
 
-To learn more about Next.js, take a look at the following resources:
+   ```
+   CONTENTFUL_MANAGEMENT_TOKEN = 'TOKEN HERE'
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+5. Install NPM packages
+   ```sh
+   npm install
+   ```
+6. Run init script
+   ```sh
+   npm run init
+   ```
+7. Create an [api key][contentful-api-token] for your newly created Contentful space and [add some content][contentful-add-content].
+8. Fill in the spaceID from the script in step 6 and the token from step 7 in .env.local
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+   ```
+   CONTENTFUL_SPACE_ID = 'Space ID'
+   CONTENTFUL_ACCESS_TOKEN = 'ACCESS TOKEN'
+   ```
 
-## Deploy on Vercel
+9. Run the project
+   ```sh
+   npm run dev
+   ```
+   or
+   ```sh
+   npm run build
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Todo
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- [ ] Easier init script
+- [ ] Dynamic better site logo (next.js issues)
+
+See the [open issues](https://github.com/aabdulbasset/personal-portfolio/issues) for a full list of proposed features (and known issues).
+
+## License
+
+Distributed under the MIT License. See `LICENSE.txt` for more information.
+
+[Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
+[Next-url]: https://nextjs.org/
+[Contentful]: https://img.shields.io/badge/Contentful-000000?style=for-the-badge&logo=contentful&logoColor=white
+[Contentful-url]: https://contentful.com
+[radixui]: https://img.shields.io/badge/radixui-fff?style=for-the-badge&logo=radixui&logoColor=black
+[radixui-url]: https://www.radix-ui.com/
+[node-url]: https://nodejs.org/en/download/current
+[tailwindcss]: https://img.shields.io/badge/TailwindCSS-0b1120?style=for-the-badge&logo=tailwindcss&logoColor=%2306B6D4
+[tailwindcss-url]: https://tailwindcss.com
+[contentful-token]: https://app.contentful.com/account/profile/cma_tokens
+[contentful-api-token]: https://www.contentful.com/developers/docs/references/authentication/#the-content-delivery-and-preview-api
+[contentful-add-content]: https://www.contentful.com/help/contentful-101/#step-5-add-content
