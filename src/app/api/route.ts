@@ -9,6 +9,7 @@ export async function GET(request: Request) {
   return Response.json({
     name: (entry.fields.name! as string).split(" ").map(titleCase).join(" "),
     location: titleCase(entry.fields.location as string),
+    about: entry.fields.about,
     email: entry.fields.email,
     github: entry.fields.github,
     linkedin: entry.fields.linkedin,

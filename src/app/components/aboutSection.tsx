@@ -5,9 +5,11 @@ import Image from "next/image";
 export default function AboutSection({
   name,
   location,
+  about,
 }: {
   name: string;
   location: string;
+  about: string;
 }) {
   return (
     <Grid
@@ -66,7 +68,7 @@ export default function AboutSection({
             lg: "7",
           }}
         >
-          A fullstack web developer currently located in {location}.
+          {about}
         </Text>
       </MotionBox>
       <Box className="flex-grow">

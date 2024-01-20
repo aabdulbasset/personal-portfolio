@@ -58,6 +58,12 @@ async function createContentTypes(envID, spaceID) {
                 required: true,
             },
             {
+                id: "about",
+                name: "about",
+                type: "Symbol",
+                required: true,
+            },
+            {
                 id: "email",
                 name: "email",
                 required: true,

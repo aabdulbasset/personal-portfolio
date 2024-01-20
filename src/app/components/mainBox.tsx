@@ -37,7 +37,11 @@ export function MainBox({
           id="about"
           className="min-h-screen lg:mt-0  mt-[100px]"
         >
-          <AboutSection name={info.name} location={info.location} />
+          <AboutSection
+            name={info.name}
+            location={info.location}
+            about={info.about}
+          />
         </TrackedSection>
         <TrackedSection index={1} id="projects" className="min-h-screen">
           {projects.length > 0 && <ProjectsSection projects={projects} />}
